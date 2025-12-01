@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Uniseals</title>
+  <link rel="icon" href="images/favicon.png" type="image/png">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- SEO -->
+  <meta name="description" content="Handcrafted Chinese signature seals — minimal, premium designs for art, documents, and gifts." />
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+
+  <!-- External JS -->
+  <script src="script.js"></script>
+
+<body>
+<header>
+  <div class="nav">
+    <!-- Brand -->
+    <a class="brand" href="/">
+      <img src="images/logo.png" alt="印和" class="logo">
+      <div>
+        <div class="brand-title">Uniseals</div>
+        <div class="brand-subtitle">Chinese Signature Seals</div>
+      </div>
+    </a>
+  <div class="nav-right">
+      <nav class="nav-links">
+        <a href="about.html" target="_blank">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="cta" href="shop.html" target="_blank">Shop</a>
+    </div>
+
+    <!-- Hamburger -->
+    <button class="hamburger" aria-label="Menu">☰</button>
+
+</header>
+  <main class="container" id="top">
+    <!-- Hero -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="hero-left">
+        <div class="eyebrow">Handcrafted • Natural Elements</div>
+        <h1 id="hero-heading">Seal Your Legacy with Chinese Signature Seals.</h1>
+        <p class="lead">Premium Chinese signature seals carved with care. Perfect for artwork, documents, and gifts — designed and crafted to be treasured.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="shop.html">Explore Designs</a>
+          <a class="btn btn-ghost" href="about.html">Our Story</a>
+        </div>
+      </div>
+      <div class="hero-right" aria-hidden="true">
+        <img src="images/White_Seal1.png" alt="戴和驄" class="preview" />
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+      <div class="about-wrapper">
+        <div class="about-text">
+          <h2>About It!</h2>
+          <p>Chinese Signature Seals are a traditional Chinese craft that highlight artistic design and beauty. They are versatile, used on artworks, documents, logos, and decorations and serve as a stylish, artistic option for your signature.</p>
+        </div>
+        <div class="about-card">
+          <strong>2025 Stellart New Year's Market</strong>
+          <div>Find us at the New Year's Market — your custom seal awaits.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product grid -->
+    <section id="shop">
+      <div class="shop-header">
+        <h2>Featured</h2>
+        <a href="shop.html" class="btn-ghost view-all" target="_blank">View all</a>
+      </div>
+      <div class="grid" aria-live="polite">
+        <article class="card">
+          <img src="images/Clan_Seal1.png" alt="戴" class="seal-stamp">
+          <h3>Ancient Clan Seal</h3>
+          <p>Meticulously hand‑carved seal of your surname.</p>
+        </article>
+        <article class="card">
+          <img src="images/White_Seal1.png" alt="戴和驄" class="seal-stamp">
+          <h3>Classic Name Seal</h3>
+          <p>Artistic hand‑carved seal of your full name.</p>
+        </article>
+        <article class="card">
+          <img src="images/Red_Seal1.png" alt="時如驄匆" class="seal-stamp">
+          <h3>Customised Seal</h3>
+          <p>Custom signature seals — perfect for gifts, festivities and personal emblems.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+      <div class="cta-inner">
+        <div>
+          <h3>Ready to make it yours?</h3>
+          <div>Custom carving and ordered pickup available.</div>
+        </div>
+        <a class="btn btn-primary" href="#contact">Request a Custom Seal</a>
+      </div>
+    </section>
+
+<!-- Contact -->
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Custom requests, questions or market info — feel free to drop your message.</p>
+  <form action="https://formsubmit.co/maxigugu.10.3.10.23.17.23@gmail.com" method="POST">
+    <input type="text" name="name" placeholder="Name" required>
+    <input type="email" name="email" placeholder="Email" required>
+    <textarea name="message" placeholder="Message" rows="4" required></textarea>
+
+    <button type="submit" class="btn btn-primary">Send</button>
+  </form>
+</section>
+
+    <footer>
+      <div class="footer-inner">
+        <div>
+          <strong>Timeless Craft</strong>
+          <div>Signature Seals • Market</div>
+        </div>
+        <div class="footer-links">
+          <div>© <span id="year"></span></div>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    document.querySelector('form').addEventListener('submit', function(e){
+      e.preventDefault();
+      alert('Thanks — your message has been noted.');
+    });
+  </script>
+
+</body>
+</html>

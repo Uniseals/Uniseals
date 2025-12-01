@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About — Uniseals</title>
+  <link rel="icon" href="images/favicon.png" type="image/png">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- SEO -->
+  <meta name="description" content="Learn more about Uniseals — our craft, story, and timeless artistry." />
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <div class="nav">
+    <!-- Brand -->
+    <a class="brand" href="index.html">
+      <img src="images/logo.png" alt="印和" class="logo">
+      <div>
+        <div class="brand-title">Uniseals</div>
+        <div class="brand-subtitle">Chinese Signature Seals</div>
+      </div>
+    </a>
+    <div class="nav-right">
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="cta" href="shop.html">Shop</a>
+    </div>
+
+    <!-- Hamburger -->
+    <button class="hamburger" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main class="container">
+  <!-- Hero / Intro -->
+  <section class="hero" aria-labelledby="about-hero-heading">
+    <div class="hero-left">
+      <div class="eyebrow">Our Story</div>
+      <h1 id="about-hero-heading">About Uniseals</h1>
+      <p class="lead">Uniseals is a brand created by Max Dai in August 2025, selling personalized and handcrafted Chinese Seals.</p>
+    </div>
+    <div class="hero-right" aria-hidden="true">
+      <img src="images/logo.png" alt="Placeholder Seal" class="preview" />
+    </div>
+  </section>
+
+  <section id="about">
+  <div class="about-wrapper">
+    <div class="about-text">
+      <h2>Our Craft</h2>
+      <p>We specialize in creating handcrafted Chinese signature seals that blend tradition with modern design. Each piece is carved with care, using natural materials to highlight the artistry and elegance of this timeless practice.</p>
+
+      <h2>Our Journey</h2>
+      <p>From local markets to international showcases, Uniseal's journey has been shaped by passion, craftsmanship and treasuring a nation's heritage and legacy.</p>
+
+      <h2>Our Vision</h2>
+      <p>Inspired by an exhibition I saw in Hong Kong Central Library when I was eight, the main aim of my brand is to preserve the Cultural Heritage of Chinese Seal carving, and to pass it on.</p>
+    </div>
+
+    <figure class="about-side-image">
+      <img src="images/DaiZhenwei - Copy.jpg" alt="Crafting seals by hand">
+      <figcaption>Crafting each seal with care and tradition.</figcaption>
+    </figure>
+  </div>
+</section>
+
+  <!-- Team -->
+  <section id="team">
+    <h2>Our Team</h2>
+    <div class="grid">
+
+      <article class="card">
+        <img src="images/DaiHecong.jpg" alt="Team Member">
+        <h3>Dai Hecong Max</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </article>
+
+      <article class="card">
+        <img src="images/DaiZhenwei.jpg" alt="Team Member">
+        <h3>Dai Zhenwei</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </article>
+
+      <article class="card">
+        <img src="images/MaWeizhong.jpg" alt="Team Member">
+        <h3>Ma Weizhong</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- Contact CTA -->
+  <section class="cta-section" id="contact">
+    <div class="cta-inner">
+      <div>
+        <h3>Get in Touch</h3>
+        <div>Every seal tells a story.</div>
+      </div>
+      <a class="btn btn-primary" href="index.html#contact">Contact Us</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <strong>Timeless Craft</strong>
+        <div>Signature Seals • Market</div>
+      </div>
+      <div class="footer-links">
+        <div>© <span id="year"></span></div>
+      </div>
+    </div>
+  </footer>
+</main>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
