@@ -27,16 +27,16 @@
       </div>
     </a>
     <div class="nav-right">
-      <nav class="nav-links">
+      <nav class="nav-links" id="mobileMenu">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="#contact">Contact</a>
       </nav>
-      <a class="cta" href="shop.html">Shop</a>
+        <a class="cta" href="shop.html">Shop</a>
     </div>
 
     <!-- Hamburger -->
-    <button class="hamburger" aria-label="Menu">☰</button>
+    <button class="hamburger" id="hamburger" aria-label="Menu">☰</button>
   </div>
 </header>
 
@@ -53,44 +53,57 @@
     </div>
   </section>
 
-  <!-- Product Grid -->
-  <section id="shop">
-    <div class="shop-header">
-      <h2>Featured Seals</h2>
-    </div>
-    <div class="grid" aria-live="polite">
-      <article class="card">
-        <img src="images/Clan_Seal1.png" alt="Ancient Clan Seal" class="seal-stamp">
-        <h3>Ancient Clan Seal</h3>
-        <p>Hand‑carved seal featuring traditional clan characters. A heritage piece for collectors.</p>
-      </article>
-      <article class="card">
-        <img src="images/White_Seal1.png" alt="Classic Name Seal" class="seal-stamp">
-        <h3>Classic Name Seal</h3>
-        <p>Elegant seal carved with your full name — perfect for documents and artwork.</p>
-      </article>
-      <article class="card">
-        <img src="images/Red_Seal1.png" alt="Customised Seal" class="seal-stamp">
-        <h3>Customised Seal</h3>
-        <p>Personalised designs for gifts, festivities, or unique emblems of identity.</p>
-      </article>
-      <article class="card">
-        <img src="images/placeholder.png" alt="Special Edition Seal" class="seal-stamp">
-        <h3>Special Edition Seal</h3>
-        <p>Limited‑run designs inspired by seasonal themes and artistic collaborations.</p>
-      </article>
-      <article class="card">
-        <img src="images/placeholder.png" alt="Minimalist Seal" class="seal-stamp">
-        <h3>Minimalist Seal</h3>
-        <p>Clean, modern lines with subtle elegance — a contemporary take on tradition.</p>
-      </article>
-      <article class="card">
-        <img src="images/placeholder.png" alt="Gift Set" class="seal-stamp">
-        <h3>Seal Gift Set</h3>
-        <p>Beautifully packaged sets — ideal for celebrations, milestones, and meaningful presents.</p>
-      </article>
-    </div>
-  </section>
+<!-- Product Grid -->
+<section id="shop">
+  <div class="shop-header">
+    <h2>Featured Seals</h2>
+  </div>
+  <div class="grid" aria-live="polite">
+    
+    <article class="card">
+      <div class="price-tag">$38</div>
+      <img src="images/Clan_Seal1.png" alt="Ancient Clan Seal" class="seal-stamped">
+      <h3>Ancient Clan Seal</h3>
+      <p>Hand‑carved seal featuring traditional clan characters. A heritage piece for collectors.</p>
+    </article>
+
+    <article class="card">
+      <div class="price-tag">$66</div>
+      <img src="images/White_Seal1.png" alt="Classic Name Seal">
+      <h3>Classic Name Seal</h3>
+      <p>Elegant seal carved with your full name — perfect for documents and artwork.</p>
+    </article>
+
+    <article class="card">
+      <div class="price-tag">$99</div>
+      <img src="images/Red_Seal1.png" alt="Customised Seal">
+      <h3>Customised Seal</h3>
+      <p>Personalised designs for gifts, festivities, or unique emblems of identity.</p>
+    </article>
+
+    <article class="card">
+      <div class="price-tag">$88</div>
+      <img src="images/Business_Seal1.png" alt="Business Seal">
+      <h3>Business Seal</h3>
+      <p>Seals catered to businesses and professional companies.</p>
+    </article>
+
+    <article class="card">
+      <div class="price-tag">$88</div>
+      <img src="images/Love_Seal1.png" alt="Love Seal">
+      <h3>Love Seal</h3>
+      <p>A seal of love - a gift for someone special.</p>
+    </article>
+
+    <article class="card">
+      <div class="price-tag">$198</div>
+      <img src="images/Gift_Set1.png" alt="Gift Set">
+      <h3>Seal Gift Set</h3>
+      <p>Beautifully packaged sets — ideal for celebrations, milestones, and meaningful presents.</p>
+    </article>
+
+  </div>
+</section>
 
   <!-- CTA -->
   <section class="cta-section">
@@ -136,6 +149,27 @@
       e.preventDefault();
       alert('Thanks — your message has been noted.');
     });
+
+  const cards = document.querySelectorAll('.card');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show-price');
+      }
+    });
+  }, {
+    threshold: 0.2
+  });
+
+  cards.forEach(card => observer.observe(card));
+
+const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  hamburger.addEventListener('click', () => {
+    mobileMenu.classList.toggle('active');
+  });
   </script>
 
 </body>

@@ -27,16 +27,16 @@
       </div>
     </a>
     <div class="nav-right">
-      <nav class="nav-links">
+      <nav class="nav-links" id="mobileMenu">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="#contact">Contact</a>
       </nav>
-      <a class="cta" href="shop.html">Shop</a>
+        <a class="cta" href="shop.html">Shop</a>
     </div>
 
     <!-- Hamburger -->
-    <button class="hamburger" aria-label="Menu">☰</button>
+    <button class="hamburger" id="hamburger" aria-label="Menu">☰</button>
   </div>
 </header>
 
@@ -79,19 +79,19 @@
     <div class="grid">
 
       <article class="card">
-        <img src="images/DaiHecong.jpg" alt="Team Member">
+        <img src="images/DaiHecongMax.png" alt="Team Member">
         <h3>Dai Hecong Max</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       </article>
 
       <article class="card">
-        <img src="images/DaiZhenwei.jpg" alt="Team Member">
+        <img src="images/DaiZhenwei.png" alt="Team Member">
         <h3>Dai Zhenwei</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       </article>
 
       <article class="card">
-        <img src="images/MaWeizhong.jpg" alt="Team Member">
+        <img src="images/MaWeizhong.png" alt="Team Member">
         <h3>Ma Weizhong</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       </article>
@@ -126,6 +126,13 @@
 
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
+
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  hamburger.addEventListener('click', () => {
+    mobileMenu.classList.toggle('active');
+  });
 </script>
 
 </body>
